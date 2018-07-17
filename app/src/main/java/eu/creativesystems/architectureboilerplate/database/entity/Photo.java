@@ -62,6 +62,8 @@ public class Photo {
 
     //region Getters
 
+    public int getId() { return id; }
+
     public int getAlbumid() {
         return albumid;
     }

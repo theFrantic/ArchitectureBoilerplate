@@ -8,6 +8,7 @@ import javax.inject.Inject;
 
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
+import eu.creativesystems.architectureboilerplate.di.component.DaggerAppComponent;
 
 public class App extends Application implements HasActivityInjector {
 
@@ -29,6 +30,6 @@ public class App extends Application implements HasActivityInjector {
     }
 
     private void initDagger() {
-        DaggerAppComponent.builder().application(this).build.inject(this);
+        DaggerAppComponent.builder().application(this).build().inject(this);
     }
 }

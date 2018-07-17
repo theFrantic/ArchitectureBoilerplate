@@ -69,7 +69,7 @@ public class PhotoRepository {
 
                     @Override
                     public void onFailure(Call<Photo> call, Throwable t) {
-
+                        Toast.makeText(App.context, "There was an error refreshing data from network", Toast.LENGTH_LONG).show();
                     }
                 });
             }

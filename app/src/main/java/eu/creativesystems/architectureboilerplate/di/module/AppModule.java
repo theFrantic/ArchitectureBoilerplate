@@ -3,10 +3,6 @@ package eu.creativesystems.architectureboilerplate.di.module;
 import android.app.Application;
 import android.arch.persistence.room.Room;
 
-import com.boisneyphilippe.githubarchitecturecomponents.api.UserWebservice;
-import com.boisneyphilippe.githubarchitecturecomponents.database.MyDatabase;
-import com.boisneyphilippe.githubarchitecturecomponents.database.dao.UserDao;
-import com.boisneyphilippe.githubarchitecturecomponents.repositories.UserRepository;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -41,7 +37,7 @@ public class AppModule {
 
     @Provides
     @Singleton
-    PhotoDao provideUserDao(MyDatabase database) { return database.photoDao(); }
+    PhotoDao providePhotoDao(MyDatabase database) { return database.photoDao(); }
 
     //endregion
 
@@ -54,8 +50,8 @@ public class AppModule {
 
     @Provides
     @Singleton
-    PhotoRepository provideUserRepository(PhotoWebservice webservice, PhotoDao userDao, Executor executor) {
-        return new PhotoRepository(webservice, userDao, executor);
+    PhotoRepository providePhotoRepository(PhotoWebservice webservice, PhotoDao photoDao, Executor executor) {
+        return new PhotoRepository(webservice, photoDao, executor);
     }
 
     //endregion
