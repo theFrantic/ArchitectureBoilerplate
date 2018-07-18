@@ -16,13 +16,12 @@ You will need:
 ## Chagelog
 
 ### Version 0.1
-First version of the project that includes:
-    - Dagger 2, in order to manage the DI
-    - Retrofit for API requests
-    - Butterknife to provide view binding (and eliminate the findViewById calls)
-    - Glide an efficient image load framework
-    - Gson to deal with JSON
-    - Room to provide a caching database
-    - ViewModel to handle the communication with the data layer and provide data to an specific component
-    - LiveData to provide observables
+First version of the project that includes: 
+* Dagger 2, in order to manage the DI - Retrofit for API requests
+* Butterknife to provide view binding (and eliminate the findViewById calls)
+* Glide an efficient image load framework
+* Gson to deal with JSON
+* Room to provide a caching database
+* ViewModel to handle the communication with the data layer and provide data to an specific component
+* LiveData to provide observables
 
