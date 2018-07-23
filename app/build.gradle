@@ -31,7 +31,7 @@ dependencies {
 
     def gson_version = "2.8.2"
     def retrofit_version = "2.3.0"
-    def dagger_version = "2.11"
+    def dagger_version = "2.16"
     def butterknife_version = "8.8.1"
     def glide_version = "4.6.1"
 
@@ -46,9 +46,9 @@ dependencies {
     // ViewModel and LiveData
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
     // alternatively, just ViewModel
-    implementation "android.arch.lifecycle:viewmodel:$lifecycle_version"
+    //implementation "android.arch.lifecycle:viewmodel:$lifecycle_version"
     // alternatively, just LiveData
-    implementation "android.arch.lifecycle:livedata:$lifecycle_version"
+    //implementation "android.arch.lifecycle:livedata:$lifecycle_version"
 
     annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
     implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
