@@ -8,7 +8,7 @@ import eu.creativesystems.architectureboilerplate.database.converter.DateConvert
 import eu.creativesystems.architectureboilerplate.database.dao.PhotoDao;
 import eu.creativesystems.architectureboilerplate.database.entity.Photo;
 
-@Database(entities = {Photo.class}, version = 1)
+@Database(entities = {Photo.class}, version = 1, exportSchema = false)
 @TypeConverters(DateConverter.class)
 public abstract class MyDatabase extends RoomDatabase {
 
