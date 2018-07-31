@@ -11,6 +11,7 @@ import dagger.android.DispatchingAndroidInjector;
 import dagger.android.support.HasSupportFragmentInjector;
 import eu.creativesystems.architectureboilerplate.R;
 import eu.creativesystems.architectureboilerplate.fragments.PhotoFragment;
+import eu.creativesystems.architectureboilerplate.fragments.PhotoListFragment;
 
 public class MainActivity extends AppCompatActivity implements HasSupportFragmentInjector {
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
     //region Show Fragment
 
     private void showFragment(Bundle savedInstanceState){
+        /**
         if (savedInstanceState == null) {
 
             PhotoFragment fragment = new PhotoFragment();
@@ -43,6 +45,14 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
             Bundle bundle = new Bundle();
             bundle.putInt(PhotoFragment.PHOTO_KEY, PHOTO_ID);
             fragment.setArguments(bundle);
+
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, fragment, null)
+                    .commit();
+        }
+         */
+        if (savedInstanceState == null) {
+            PhotoListFragment fragment = new PhotoListFragment();
 
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragment_container, fragment, null)

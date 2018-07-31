@@ -1,8 +1,10 @@
 package eu.creativesystems.architectureboilerplate.database.entity;
 
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
+import android.support.v7.util.DiffUtil;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -110,6 +112,21 @@ public class Photo {
 
     public void setLastRefresh(Date lastRefresh) {
         this.lastRefresh = lastRefresh;
+    }
+
+    //endregion
+
+    //region Public Methods
+
+    @Override
+    public boolean equals (Object obj) {
+        if (obj == this) {
+            return true;
+        }
+
+        Photo photo = (Photo) obj;
+
+        return (photo.id == this.id && photo.title.equals(this.title));
     }
 
     //endregion
